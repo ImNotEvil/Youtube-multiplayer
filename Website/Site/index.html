@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<title>Framboise</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0">
+	<script src="/ressources/script.js"></script>
+	<style>
+		table {
+			width: 100%;
+			border-spacing: 0px;
+			vertical-align: middle;
+		}
+
+		th {
+			padding: 0px;
+		}
+
+		img {
+			max-width: 50%;
+			height: auto;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		input[type=text] {
+			width: 100%;
+			height: 8vh;
+			padding: 12px 20px;
+			margin: 8px 0;
+			box-sizing: border-box;
+			border: 3px solid lightblue;
+			-webkit-transition: 0.5s;
+			transition: 0.5s;
+			outline: none;
+		}
+
+		input[type=text]:focus {
+			border: 3px solid darkblue;
+			background-color: lightblue;
+		}
+
+		html {
+			width: 100%;
+			height: 100%;
+			clip: auto;
+			position: absolute;
+			font-size: 100%;
+		}
+
+		#container {
+			width: 80%;
+			height: 55vh;
+			display: block;
+			overflow: auto;
+			margin: auto;
+		}
+
+		.shadow {
+			filter: drop-shadow(0 0 10px #FF0000);
+			transition: filter 1s;
+		}
+	</style>
+
+</head>
+
+<body>
+	<table style="height:10vh">
+		<tr>
+			<th><img onclick="requete('volume-down')" id="volume-down" src="ressources/volume-down.png"></th>
+			<th><img onclick="requete('bluetooth')" id="bluetooth" src="ressources/earphones.png"></th>
+			<th><img onclick="requete('volume-up')" id="volume-up" src="ressources/volume-up.png"></th>
+		</tr>
+	</table>
+	<table>
+		<tr style="height:60vh">
+			<th>
+				<img id="unlock" src="ressources/unlock.png">
+			</th>
+			<th colspan="3">
+				<div id="container">
+				</div>
+			</th>
+			<th>
+				<img id="lock" src="ressources/lock.png">
+			</th>
+		</tr>
+		<tr style="height:10vh">
+			<th><img onclick="requete('back')" id="back" src="ressources/back.png"></th>
+			<th><img onclick="requete('stop')" id="stop" src="ressources/stop.png"></th>
+			<th><img onclick="requete('pause')" id="pause" src="ressources/pause.png"></th>
+			<th><img onclick="requete('start')" id="start" src="ressources/play.png"></th>
+			<th><img onclick="requete('next')" id="next" src="ressources/next.png"></th>
+		</tr>
+	</table>
+	<table style="height:10vh">
+		<tr>
+			<th style="width: 80%">
+				<input type="text" id="url" name="url" placeholder="Url youtube">
+			</th>
+			<th style="width: 20%"><img onclick="youtube()" id="youtube" src="ressources/upload.png"></th>
+		</tr>
+	</table>
+</body>
+
+</html>
